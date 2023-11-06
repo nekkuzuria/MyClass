@@ -15,10 +15,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val adapterStudent = StudentAdapter(generateMahasiswa()){
-                student -> Toast.makeText(this@MainActivity, "Hei! You clicked on ${student.nama}",
-            Toast.LENGTH_SHORT).show()
-        }
+        val adapterStudent = StudentAdapter(generateMahasiswa())
         with(binding){
             revStudent.apply {
                 adapter = adapterStudent
